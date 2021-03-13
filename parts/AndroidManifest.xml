@@ -26,6 +26,22 @@
         </receiver>
 
         <activity
+            android:icon="@drawable/ic_settings_device"
+            android:name=".DevicePreferenceActivity"
+            android:label="@string/device_settings_app_name"
+            android:theme="@style/Theme.Main">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/advanced_settings_summary" />
+        </activity>
+
+        <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
             android:theme="@style/Theme.Main">
